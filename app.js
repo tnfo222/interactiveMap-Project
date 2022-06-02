@@ -1,11 +1,11 @@
-// map object
+// myMap objects
 const myMap = {
 	coordinates: [],
 	businesses: [],
 	map: {},
 	markers: {},
 
-	// build leaflet map
+	// build map
 	buildMap() {
 		this.map = L.map('map', {
 		center: this.coordinates,
@@ -38,7 +38,7 @@ const myMap = {
 	},
 }
 
-// get coordinates via geolocation api
+// get coords
 async function getCoords(){
 	const pos = await new Promise((resolve, reject) => {
 		navigator.geolocation.getCurrentPosition(resolve, reject)
